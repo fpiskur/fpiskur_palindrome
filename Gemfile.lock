@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fpiskur_palindrome (0.1.0)
+    fpiskur_palindrome (0.2.0)
 
 GEM
   remote: https://rubygems.org/
