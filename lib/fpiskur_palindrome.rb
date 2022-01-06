@@ -2,7 +2,7 @@
 
 require_relative "fpiskur_palindrome/version"
 
-class String
+module FpiskurPalindrome
 
   # Returns true for a palindrome, false otherwise.
   def palindrome?
@@ -13,6 +13,14 @@ class String
     # Returns content for palindrome testing.
     def processed_content
       # "Ruby is smart enough to apply the scan to the string itself", so no self.scan.... necessary
-      scan(/[a-z]/i).join.downcase
+      to_s.scan(/[a-z\d]/i).join.downcase
     end
+end
+
+class String
+  include FpiskurPalindrome
+end
+
+class Integer
+  include FpiskurPalindrome
 end
